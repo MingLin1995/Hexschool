@@ -59,7 +59,7 @@ img{
 
 
 /******************** BODY ********************/
-/* *{outline:1px solid white}   */
+/**{outline:1px solid white}  */
 .body{
 	width: 1920px;
 	height: 1918px;
@@ -67,23 +67,31 @@ img{
 	font-family: "Noto Sans TC" , sans-serif;
 	/* 
 	助教：由於 Noto Sans TC 不是系統預設字體，因此會需要從外部引入 Noto Sans TC 的字體檔，並且補上 sans-serif 無襯字體，做為部分裝置無法顯示 Noto Sans TC 時的替代字體。
-
 	卡片文字的字體可以統一設定在 body 標籤，透過 CSS 繼承將字體套用到子層標籤。
-	
 	*/
 	background-color: #020202;
 	color: white;
 }
-@media (max-width:767px) {
+
+@media (max-width:1950px) {
 	.body{
-		width: 375px;
+		max-width: 100%; 
 	}
 }
 
 
+@media (max-width:767px) {
+	.body{
+		width: 375px; 
+	}
+}  
+
+
+
+
 /********** PAGE1 **********/
 .title1{
-	max-width: 1296px;
+	width: 1320px;
 	margin:0 auto 40px auto;
 	display: flex;
 	justify-content: space-between;
@@ -91,6 +99,13 @@ img{
 	padding-bottom: 20px;
 	border-bottom: 1px solid #FFFFFF;
 }
+@media (max-width:1950px) {
+	.title1{
+		max-width: 80%; 
+	}
+}
+
+
 @media (max-width:767px) {
 	.title1{
 		margin: 0px 12px 40px 12px;
@@ -100,6 +115,7 @@ img{
 	width: 188.99px;
 	height: 40px;
 }
+
 @media (max-width:767px) {
 	.title1 img{
 		width: 147px;
@@ -131,9 +147,15 @@ img{
 }
 
 .title2{
-	max-width: 1296px;
+	width: 1320px;
 	margin:0 auto;
 }
+@media (max-width:1950px) {
+	.title2{
+		max-width: 80%; 
+	}
+}
+
 @media (max-width:767px) {
 	.title2{
 		margin: 0px 12px 180px 12px;
@@ -172,10 +194,15 @@ img{
 
 
 .title3{
-	max-width: 1296px;
+	width: 1320px;
 	margin:0 auto;
 	display: flex;
 	justify-content:flex-end;
+}
+@media (max-width:1950px) {
+	.title3{
+		max-width: 80%; 
+	}
 }
 @media (max-width:767px) {
 	.title3{
@@ -255,7 +282,11 @@ img{
 .page2{
 	max-width: 1296px;
 	margin:160px auto 160px auto;
-
+}
+@media (max-width:1950px) {
+	.page2{
+		max-width: 80%; 
+	}
 }
 @media (max-width:767px) {
 	.page2{
@@ -332,7 +363,7 @@ img{
 	padding: 80px 40px 80px 40px;
 	border: 1px solid #525252;
 	border-radius: 16px;
-	width: 416px;
+	flex: 1; /* 使其在容器中佔據相同的比例 */
 }
 @media (max-width:767px) {
 	.page2-1-frame-content{
@@ -729,6 +760,11 @@ img{
 	font-size: 80px;
 	line-height: 120%;
 }
+@media (max-width:1250px) {
+	.title h1{
+		font-size: 49px;
+	}
+}
 @media (max-width:767px) {
 	.title h1{
 		font-style: normal;
@@ -779,6 +815,7 @@ img{
 	padding-top: 24px;
 	padding-bottom: 16px;
 }
+
 .filterFrame1-RWD,.filterFrame2-RWD{
 	display: none;
 }
@@ -902,8 +939,8 @@ img{
 		font-size: 16px;
 	}
 }
-/***** container *****/
-.container{
+/***** containerCard *****/
+.containerCard{
 	/* padding:528px 312px 250px 312px;*/
 	max-width: 1296px;
 	margin: 0 auto;
@@ -914,6 +951,22 @@ img{
 	flex-wrap: wrap; 
 	justify-content: space-between;
 	align-items: stretch;
+}
+@media (max-width:1250px) {
+	.card-group{
+		margin-left: 10%;
+	}
+}
+@media (max-width:1060px) {
+	.card-group{
+		margin-left: 20%;
+
+	}
+}
+@media (max-width:767px) {
+	.card-group{
+		margin-left: 0%;
+	}
 }
 
 .card{
@@ -926,6 +979,7 @@ img{
 	display: flex;
 	flex-direction: column;
 }
+
 @media (max-width:767px) {
 	.card{
 		margin-top: 12px;
@@ -1130,6 +1184,7 @@ img{
 	border-bottom: 1px solid #FFFFFF;
 	padding-top: 80px;
 }
+
 @media (max-width:767px) {
 	.page4-2-1 {
 		flex-direction: column-reverse;
@@ -1170,6 +1225,7 @@ img{
 .page4-2-2-RWD{
 	display: none;
 }
+
 @media (max-width:767px) {
 	.page4-2-2 {
 		display: none;
@@ -1203,6 +1259,7 @@ img{
 	font-size: 16px;
 	line-height: 150%;
 }
+
 .li-1{
 	padding-right: 80px;
 	margin-right: 20px;
@@ -1220,6 +1277,11 @@ img{
 }
 .li-3{
 	margin-right: 702px;
+}
+@media (max-width:1950px) {
+	.li-3{
+		margin-right: 20%;
+	}
 }
 .page4-2-2 li{
 	display: flex;
