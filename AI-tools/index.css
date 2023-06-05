@@ -59,10 +59,10 @@ img{
 
 
 /******************** BODY ********************/
-/**{outline:1px solid white}  */
+/* *{outline:1px solid white}   */
 .body{
-	width: 1920px;
-	height: 1918px;
+/* 	width: 1920px;
+	height: 1918px; .body 於電腦、手機版型設定的寬高建議移除。*/
 	margin:0 auto;
 	font-family: "Noto Sans TC" , sans-serif;
 	/* 
@@ -73,10 +73,17 @@ img{
 	color: white;
 }
 
-@media (max-width:1950px) {
+/* @media (max-width:1950px) {
 	.body{
 		max-width: 100%; 
 	}
+} .body 於電腦、手機版型設定的寬高建議移除。*/
+
+.container{
+	padding: 0px 12px;
+}
+.container-title{
+	margin:  12px;
 }
 
 
@@ -105,12 +112,6 @@ img{
 	}
 }
 
-
-@media (max-width:767px) {
-	.title1{
-		margin: 0px 12px 40px 12px;
-	}
-}
 .title1 img{
 	width: 188.99px;
 	height: 40px;
@@ -158,7 +159,7 @@ img{
 
 @media (max-width:767px) {
 	.title2{
-		margin: 0px 12px 180px 12px;
+		margin-bottom: 180px;
 	}
 }
 
@@ -204,11 +205,7 @@ img{
 		max-width: 80%; 
 	}
 }
-@media (max-width:767px) {
-	.title3{
-		margin: 0 12px 0 12px;
-	}
-}
+
 /* 動畫效果，來源：Chart GPT */
 .title3-1 {
 	overflow: hidden;
@@ -290,7 +287,7 @@ img{
 }
 @media (max-width:767px) {
 	.page2{
-		margin: 120px 12px 120px 12px;
+		margin:120px auto 120px auto;
 	}
 }
 .page2-1{
@@ -351,10 +348,11 @@ img{
 .page2-1-frame{
 	display: flex;
 }
+
 @media (max-width:767px) {
 	.page2-1-frame{
 		flex-wrap: wrap;
-
+		flex-direction: column; 
 	}
 }
 
@@ -370,6 +368,7 @@ img{
 		width: auto;
 		padding: 40px 20px 40px 20px;
 		margin: 0;
+
 	}
 }
 .page2-1-frame-content:not(:last-of-type){
@@ -377,7 +376,8 @@ img{
 }
 @media (max-width:767px) {
 	.page2-1-frame-content:not(:last-of-type){
-		margin: 0;
+		margin-right: 0px;
+		margin-bottom: 12px;
 	}
 }
 
@@ -438,6 +438,7 @@ img{
 	margin-bottom: 160px;
 	position: relative;
 	overflow: hidden; /* 圖片超出框架的部分不要顯示 */
+	overflow: scroll;
 }
 @media (max-width:767px) {
 	.loge{
@@ -507,14 +508,14 @@ img{
   .loge1RWD, .loge2RWD {
 	display: none;
   }
-@media (max-width:767px) {
+/* @media (max-width:767px) {
 	.loge1,.loge2{
 		display: none;
 	}
 	.loge1RWD, .loge2RWD{
 		display: flex;
 	}
-}
+} */
 
 
   .loge2 {
@@ -725,12 +726,15 @@ img{
 
 /********** PAGE3 **********/
 .page3{
+
+	margin: 0 auto;
 	background-color:#FFFFFF ;
 	border-radius: 160px;
 	color: black;
 }
 @media (max-width:767px) {
 	.page3{
+		
 		border-radius: 20px;
 		padding: 80px 12px 80px 12px;
 		overflow: hidden;
@@ -970,7 +974,7 @@ img{
 }
 
 .card{
-	width: 416px;
+	width: 416px; /* 建議用百分比 */
 	/* height: 558px; */
 	border: 1px solid #F2F2F2;
 	border-radius: 16px;
@@ -995,7 +999,7 @@ img{
 	transition: transform 0.3s; /* 滑鼠移出圖片的時候也會有，transition的轉場效果 */
 }
 
-.img img:hover{
+.card:hover img{
 	transform: scale(1.2); /* 放大效果 */
 }
 
@@ -1291,6 +1295,7 @@ img{
 }
 @media (max-width:767px) {
 	.li-4{
+		margin: 0;
 		padding-top: 12px;
 	}
 }

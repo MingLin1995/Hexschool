@@ -17,9 +17,9 @@
 <body class="body">
     <div class="page1 ">
         <div class="title1 ">
-            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true" alt="AI工具王">
+            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true" alt="AI工具王" object-fit: contain;> <!-- 圖片如果變形可以加上object-fit: contain;，會等比適應容器 -->
             <ul>
-                <li>首頁</li>
+                <li>首頁</li> <!-- 建議ul>li>a的結構 -->
                 <li>定價</li>
             </ul>
             <span class="material-icons">
@@ -28,7 +28,7 @@
 
         </div>
 
-        <div class="title2 ">
+        <div class="title2 "> <!-- 內文可以放同一個標籤，用<br>斷行 -->
             <p>透過</p>
             <p>AI工具王的</p>
             <p>強大模型</p>
@@ -52,13 +52,16 @@
     </div>
 
     <div class="page2 ">
-        <div class="page2-1"> <!-- 語意化命名 ex:service -->
-            <p>我們的服務</p>
+        <div class="page2-1"> <!-- 建議不用數字編號，用語意化命名 ex:service -->
+            
+            <!-- 我們的服務和右側的文字段落可以包div，把page2-1設定的flex一到這層div -->
+            <p>我們的服務</p> <!-- 建議H2 -->
             <div class="page2-1-p">
-                <p>我們相信透過AI技術，</p>
+                <p>我們相信透過AI技術，</p> 
                 <p>包括圖像辨識、自然語言處理和機器翻</p>
                 <p>譯等，讓您更快、更準確地做出決策。</p>
             </div>
+
             <div class="page2-1-p-rwd">
                 <p>我們相信透過 AI 技術，包括圖像識別、自然語言處理和機器翻譯等，讓您更快、更準確地做出決策。</p>
             </div>
@@ -68,7 +71,7 @@
                     <span class="material-icons">
                         flash_on
                     </span>
-                    <div class="page2-1p2">
+                    <div class="page2-1p2"> <!-- 內部卡片標題用H3 -->
                         快速
                     </div>
                     <div class="page2-1p3">
@@ -105,7 +108,7 @@
         <div class="page2-2"> <!-- 語意化命名 ex:cooperate -->
             <p>來自合作夥伴</p>
 
-            <div class="loge">
+            <div class="loge"> <!-- loge1RWD 、loge2RWD 可以移除。該區塊的 RWD 版型可以使用 loge1 、loge2 的 HTML 結構，在 RWD 斷點設定 overflow: scroll; 提供左右滑動的功能。 -->
                 <div class="loge1">
                     <div class="logeFrame1">
                         <div class="logeLeft"></div>
@@ -344,8 +347,8 @@
     </div>
 
 
-    <div class="page3 r">
-        <div class="title">
+    <div class="page3 ">
+        <div class="title"> <!-- 建議 h2>span*2 -->
             <h1>這些超酷的應用，</h1>
             <h1>都來自AI工具王</h1>
         </div>
@@ -359,7 +362,7 @@
 
         <div class="filterFrame">
             <div class="filter">
-                <p>
+                <p> <!-- 建議使用 button 標籤 -->
                     篩選
                     <span class="material-icons">
                         tune
@@ -368,7 +371,7 @@
             </div>
 
             <div class="list">
-                <ul>
+                <ul> <!-- 建議包a標籤 -->
                     <li class="all">全部</li>
                     <li>聊天</li>
                     <li>影像辨識</li>
@@ -381,7 +384,7 @@
             </div>
 
             <div class="sort">
-                <p>
+                <p> <!-- 建議使用 button 標籤 -->
                     由新到舊
                     <span class="material-icons">
                         expand_more
@@ -438,11 +441,11 @@
                         <h3>Chatbot Builder</h3>
                         <p>建立智能化的聊天機器人，解答常見問題、提供客戶支援、收集反饋等。</p>
                     </div>
-                    <div class="name">
+                    <div class="name"> <!-- 建議改成使用 span 標籤，因為此處不具有文字段落的語意。 -->
                         <h4>AI模型</h4>
                         <p>卡卡</p>
                     </div>
-                    <div class="item">
+                    <div class="item"> <!-- 建議改成使用 span 標籤，因為此處不具有文字段落的語意。 -->
                         <p>#聊天</p>
                         <a href="#" class="link">
                             <span class="material-icons">
@@ -561,11 +564,11 @@
 
         <div class="pages">
             <ul>
-                <div class="pages1">
-                    <li>
-                        1
-                    </li>
-                </div>
+                <!-- ul 內層第一層只能使用 li 或是 ul 、ol ，建議將 div.pages1 移除，class pages1 可以移到 li 標籤上。 -->
+                <!-- 頁碼的數字和換頁 icon建議包一層 a 標籤。 -->
+                <li class="pages1">
+                    1
+                </li>
                 <li>2</li>
                 <li>3</li>
                 <li>4</li>
@@ -581,6 +584,7 @@
 
     <div class="page4 container">
         <div class="page4-1">
+            <!-- page4-1-1、page4-1-2不需要 -->
             <div class="page4-1-1">
                 <p>現在就來建立屬於你的服務吧</p>
             </div>
@@ -596,7 +600,7 @@
 
         <div class="page4-2">
             <div class="page4-2-1">
-                <div class="page4-2-1-p">
+                <div class="page4-2-1-p"> <!-- 建議ul>li>a的結構 -->
                     <p class="page4-2-1-title">首頁</p>
                     <p>定價</p>
                 </div>
@@ -619,7 +623,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="page4-2-2-RWD">
+            <div class="page4-2-2-RWD"> <!-- 可以移除，用flex order 調整排序
+            https://w3c.hexschool.com/flexbox/4007bc24 -->
                 <ul class="ul-1">
                     <li class="li-1">AI工具王 © 2023</li>
                     <li class="li-4">Back to top</li>
