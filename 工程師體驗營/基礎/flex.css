@@ -1,0 +1,133 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {               /*這會將預設符號清除*/
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*,*:before,*:after { 
+    box-sizing:border-box;
+}
+/**********************************************************************/
+.container{
+    background: #004466;
+    width: 1600px;
+    height:800px;
+    margin: 0 auto;
+    padding:10px;
+    display:flex; 
+    /*要下在外層屬性，才能控制內層屬性，水平排列，自動調整寬、高*/
+    /*寬度會依照比例去伸縮item，所以item寬度會依照比例自動調整，除非有額外設定數值*/
+    /*高度也會依照最多文字的內容自動調整*/
+
+    /*flex軸線*/
+    /*flex-direction:row; /*主軸，左到右(預設)*/ /*交錯軸，上到下*/
+    /*flex-direction:row-reverse; /*主軸，右到左*/ /*交錯軸，上到下*/
+    flex-direction:column; /*主軸，上到下*/  /*交錯軸，左到右*/
+    /*flex-direction:column-reverse; /*主軸，下到上*/  /*交錯軸，左到右*/
+
+    /*justify-content 對齊方法，都是依照軸線(flex-direction)方向對齊，所以可能水平對齊，也可能垂直對齊*/
+    /*justify-content:flex-start; /*依照軸線方向對齊(預設)*/
+    justify-content:center; /*置中*/
+    /*justify-content:space-around; /*平均分配寬*/
+    /*justify-content:flex-end; /*依照軸線反方向對齊*/
+    /*justify-content:space-between; /*左右貼齊邊界，中間平均分配寬*/
+
+    /*align-items:flex-start; /*交錯軸，順向*/
+    align-items:center; /*置中*/
+    align-items:stretch; /*順向，上下展開(flex-direction:row 才會有效果)*/
+    align-items:flex-end; /*交錯軸，逆向*/
+    align-items:baseline; /*對齊項目中的文字*/
+  }
+  
+.item{
+  width:500px; /*若item沒有設定寬度，就會依此為預設寬度*/
+  background:#00ffa2;
+  color:#004466;
+  font-size:36px;
+  text-align:center;
+  margin:5px;
+}
+  
+.item1{
+  width:150px;
+  height:150px;
+}
+.item2{
+  height:200px;
+}
+.item3{
+  width:400px;
+}
+
+/*************************************************************************************/
+.menu{
+  border:5px solid red;
+  width:600px;
+  margin: 0 auto;
+  display:flex;
+  flex-wrap: wrap; /*滿版就換行，版面寬度600，li寬度100，所以最多放六個(紅線也有佔到空間，刪除後就能放滿六格)*/
+}
+.menu li{
+  list-style-type: none; /*把黑點隱藏起來*/
+  border:1px solid blue;
+  width:100px;
+  text-align:center;
+}
+.menu li a{
+  background-color:yellow;
+  display:block; /*變區塊元素，整個區塊都能當按鈕*/
+  padding-top:10px; /*增加區塊範圍，如果寫在li層級，會沒辦法增加範圍*/
+  padding-bottom:10px; /*增加區塊範圍，如果寫在li層級，會沒辦法增加範圍*/
+  color:green;
+  margin-bottom:20px
+}
+.menu li a:hover{
+  background-color:green;
+  display:block; /*變區塊元素，整個區塊都能當按鈕*/
+  padding-top:10px; /*增加區塊範圍，如果寫在li層級，會沒辦法增加範圍*/
+  padding-bottom:10px; /*增加區塊範圍，如果寫在li層級，會沒辦法增加範圍*/
+  color:yellow;
+}

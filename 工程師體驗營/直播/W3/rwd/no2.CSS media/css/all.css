@@ -1,0 +1,31 @@
+/* 先看權重，再看CSS先後 */
+/* HTML  標籤選擇器 1分  h1{} */
+/* CLASS 類別選擇器 10分 .header{} */
+/* [盡量不要用] ID選擇器100分 一個網頁只能有一個 */
+/* [盡量不要用] 行內選擇器:1000分 style="color:green"*/
+/* !important:10000分 */
+
+/*先寫PC版型，再依序往下寫響應式設計*/
+.title{
+  color: red;
+}
+.content{
+  color: black;
+}
+/*在 iPad 直式下變更樣式*/
+@media(max-width:992px){
+  .title{
+    color: blue;
+  }
+  .content{
+    font-size: 30px;
+  }
+}
+/*在 iPhone11 直式下變更樣式 */
+@media(max-width: 767px){
+  .title{
+    color: yellow;
+  }
+}
+
+

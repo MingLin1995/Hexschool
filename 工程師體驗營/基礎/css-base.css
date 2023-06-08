@@ -1,0 +1,60 @@
+/*
+    CSS權重：ID選擇器(100分)>類別選擇器(10分)>標籤選擇器(1分)
+    同一類別下，下面會優於上面的程式碼
+    程式碼後面加上 !important就代表最優先
+    ex: color:red !important
+*/
+
+
+/*
+標籤選擇器{
+    屬性:設定值;
+    屬性:設定值;
+}
+*/
+h1{
+    color:red;
+    font-size:14px;
+} 
+
+/*擬態選擇器，可以讓使用者更有互動感；hover、active*/
+a:hover{ /*滑鼠移動過去時的效果*/
+    color:blue;
+    font-size:45px;
+}
+
+a:active{ /*滑鼠按住不放時的效果*/
+    color:red;
+}
+
+/*類別選擇器 class*/
+.style1 {
+    color:pink;
+   
+}
+/*id選擇器，整個網頁只會有一個，所以會比較少用*/
+#style2 {
+    color:green;
+}
+
+/*文字、排版*/
+.style3{
+    font-family:verdana; /*字體*/ 
+    text-decoration:underline; /*底線；若要刪除線line-through*/
+    text-align:left; /*文字置左*/
+
+    font-size:20px;
+    text-indent:40px; /*首行縮排，一個字體是20px，兩個所以是40px*/
+    line-height:1.5; /*行距，會依照字體的大小設定每行的高度*/
+    /*每行高度=20px*1.5=30px，所以文字本身20px，距離上、下邊界5px*/  
+    letter-spacing:2px;/*文字和文字之間的距離*/ 
+}
+
+/*線條粗細、線條樣式、線條顏色*/
+.style4{
+    border-top:5px dotted red; 
+    /*border-top、bottom、left、right，可以自由設計要顯示邊框的哪邊*/
+    /*solid實心線條、dashed虛線、dotted圓點虛線*/
+}
+
+

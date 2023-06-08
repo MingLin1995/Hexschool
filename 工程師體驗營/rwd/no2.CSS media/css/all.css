@@ -1,0 +1,52 @@
+/*先寫PC版型，再依序往下寫響應式設計*/
+
+/* 
+先看權重，再看CSS先後順序 ，後者優先(只要看CSS不用考慮HTML的選擇器順序)
+HTML標籤1分
+CSS類別選擇器10分
+盡量不要用ID選擇器，因為權重是100分，很難被覆蓋，一個網頁只會有一個ID選擇器
+*/
+
+.title{
+  color:blue;
+}
+.title2{
+  color: red;
+}
+h1{
+  color:pink;
+}
+.container .title{ /* 權重20分，所以會優先顯示，設定RWD也要考慮權重問題 */
+  color: black;
+}
+
+
+.content{
+  color: black;
+}
+
+/*在 iPad 直式下變更樣式*/
+/* 解析度992px以下的樣式會被開啟 */
+@media(max-width:992px){
+  .title{
+    color: blue;
+  }
+  .content{
+    font-size: 30px;
+  }
+}
+
+/*在 iPhone11 直式下變更樣式 */
+/* 解析度767px以下的樣式會被開啟 */
+@media(max-width: 767px){
+  .title{
+    color: yellow;
+  }
+}
+
+/* 
+手機 375 414
+ipad 768
+pc 1140 1200
+*/
+

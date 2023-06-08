@@ -1,0 +1,112 @@
+/* reset css */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* rwd img css，可當作是 CSS Reset 其中一個 */
+
+img{ 
+  max-width: 100%; /*用max才會隨著螢幕大小自動調整圖片大小，不然會出現x軸*/
+  height: auto;
+}
+
+/* 全域 border box */
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+
+/* ------------------------------------ */
+
+.container{
+  background: #004466;
+  width: 500px;
+  height: 500px;
+  display: flex; /* df */
+
+  /* 主軸方向的調整，注意看項目的順序 */
+  flex-direction: row;/*預設值，左到右*/ /* fxdr */ 
+  /*flex-direction: row-reverse;/* 右到左 */ /* fxdrr */
+  /*flex-direction: column; /* 上到下 */ /* fxdc */
+  /*flex-direction: column-reverse; /* 下到上 */ /* fxdcr */
+
+  /* 對齊的方式以主軸為準 */
+  justify-content: flex-start; /* 預設值，靠左 */ /* jcfs */
+  justify-content: flex-end; /* 靠右 */ /* jcfe */ 
+  justify-content: center; /* 水平置中 */ /* jcc */
+  justify-content: space-between; /* 左右貼齊邊界，中間平均分配寬 */ /* jcsb */
+  justify-content: space-around; /* 平均分配寬(左右兩邊會比較窄) */ /* jc sa */
+  justify-content: space-evenly; /* 平均分配寬 */ /* jc se */
+
+  flex-wrap: wrap; /* 自動換行 */ /* fxww */
+  /*flex-wrap: wrap-reverse; /* 換行，由下往上 */
+    
+}
+
+.item{
+  width: 100px;
+  height: 100px;
+  background: #00ffa2; 
+}
+
+.container2{
+  background: black;
+  width: 500px;
+  height: 500px;
+  display: flex; /* df */
+
+  flex-direction: row;
+  justify-content: center;
+
+  /* 對齊的方式以交錯軸為準 */
+  align-items: flex-start; /* 預設，上到下 */ /* aifs */
+  align-items: flex-end; /* 下到上 */ /* aife */
+  align-items: center; /* 垂直置中 */
+  align-items: stretch; /* 展開到最大，若有固定高度，就沒有用 */ /* aisc */
+  align-items: baseline; /* 對其內容物的基線 */ /* aib */
+
+}
