@@ -79,6 +79,49 @@ let mingScore= checkScore(80);
 console.log(mingScore);
 let markScore= checkScore(40);
 console.log(markScore);
+console.log("--------------------");
+
+
+/* 判斷是否為偶數 小步測試 反覆驗證 從簡單的寫到難的 */
+
+/* 基本的判斷 */
+/* let myInput= 4;
+let checkNumber=myInput%2==0;
+console.log(checkNumber);
+
+if(checkNumber){
+    console.log("是偶數");
+}else{
+    console.log("不是偶數");
+} */
+
+/* 使用function判斷 */
+let count=0
+
+function checkNumber(input){
+    count+=1;
+    if (input%2==0){
+/*         console.log("是偶數"); */
+        return "是偶數";
+    }else{
+/*         console.log("不是偶數"); */
+        return "不是偶數";
+    }
+}
+
+/* 一般輸出 */
+/* checkNumber(11);
+checkNumber(10); */
+
+/* 透過回傳值輸出 */
+let checkSevenNumber=checkNumber(11);
+console.log(checkSevenNumber);
+let checkEightNumber=checkNumber(10);
+console.log(checkEightNumber);
+
+/* 紀錄總共計算幾次 */
+console.log(`您一共計算了${count}次`);
+console.log("--------------------");
 
 
 
