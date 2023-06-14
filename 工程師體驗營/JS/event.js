@@ -81,6 +81,3 @@ el7.addEventListener("click",function(e){
 },false);
 
 
-/* ------------------------------ */
-/* change - 表單內容更動內容時觸發 */
-
