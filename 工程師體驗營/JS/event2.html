@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>event 事件</title>
+    <link rel="stylesheet" href="event2.css">
 </head>
 <body style="background-color: black;color: white;">
-    <!--  -->
+    <!-- change - 表單內容更動內容時觸發 -->
+    <select name="表單" id="areaId">
+        <option value="潭子區">潭子區(文字)</option>
+        <option value="北屯區">北屯區(文字)</option>
+    </select>
+    <ul class="list"></ul>
     <hr>
+
+    <!-- keyCode - 點擊鍵盤，射發火箭！ -->
+    <div class="map"></div>
+    <div class="img">
+        <img src="rocket.jpg" alt="" class="rocket rocket-1">
+        <img src="rocket.jpg" alt="" class="rocket rocket-2">
+        <img src="rocket.jpg" alt="" class="rocket rocket-3">
+    </div>
+
+    <!-- blur - 離開焦點時進行事件觸發-->
+    <hr>
+
     <script src="event2.js"></script>
 </body>
 </html>
