@@ -6,7 +6,7 @@
     <title>event 事件</title>
     <link rel="stylesheet" href="event.css">
 </head>
-<body style="background-color: black; color: white;">
+<body style="background-color: black; color: white;" class="body">
     <!-- 告知你當下元素資訊 -->
     <input type="button" value="點擊" class="btn">
     <hr>
@@ -20,9 +20,33 @@
     <input type="button" value="add點擊" class="btn4">
     <hr>
 
-    <!-- Event Bubbling、Event Capturing 差異 -->
-    <hr>
+    <!-- false（事件氣泡-Event Bubbling）：從指定元素往外找（預設） -->
+    <!-- ture（事件捕捉-Event Capturing）：從最層往內找到指定元素 -->
     <div class="box"></div>
+    <hr>
+
+    <!-- stopPropagation - 中止冒泡事件 -->
+    <div class="box2"></div>
+    <hr>
+
+    <!-- preventDefault - 取消預設觸發行為 -->
+    <a class="link" href="http://www.google.com.tw">menu icon</a>
+    <hr>
+
+    <!-- e.target - 了解目前所在元素位置  -->
+    <div class="header">
+        <ul>
+            <li>
+                <a href="#">123</a>
+            </li>
+        </ul>
+    </div>
+    <hr>
+
+    <!-- change - 表單內容更動內容時觸發 -->
+    <hr>
+   
+
 
     <script src="event.js"></script>
 </body>
