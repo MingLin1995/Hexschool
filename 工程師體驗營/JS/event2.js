@@ -61,4 +61,60 @@ body.addEventListener("keydown",goRocket,false) /* 按下按鍵會執行goRocket
 
 
 /* ----------------------------------- */
-/* blur - 離開焦點時進行事件觸發 */
+/* 計算的程式碼，用GPT產生的，非該章節重點 */
+function calculatePrice() {
+    // 獲取輸入框中的值
+    /* parseInt字串轉整數(string(字串), radix(預設為0，取到小數點第n位)); */
+    var burgerQuantity = parseInt(document.getElementById("burgerInput").value);
+    var cokeQuantity = parseInt(document.getElementById("cokeInput").value);
+
+    // 計算總價
+    var burgerPrice = 50;
+    var cokePrice = 20;
+    var totalPrice = burgerPrice * burgerQuantity + cokePrice * cokeQuantity;
+
+    // 顯示總價
+    document.getElementById("totalPrice").innerHTML = "總價：" + totalPrice + "元";
+  }
+/* blur - 離開焦點時進行事件觸發 (若沒輸入數值會跳出警告) */
+function checkContent(e){
+    var str= e.target.value; /* 查出文字欄位的值 */
+    if(str==""){ /* 若欄位為空字串，就跳出警示 */
+        alert("此欄位不可為空")
+    }
+}
+var el1=document.getElementById("totalPrice");
+el1.addEventListener("chick",totalPrice,false);
+
+/* focus 所在焦點(點擊到焦點，會產生出focus事件) */
+/* blur 離開焦點 (離開焦點的時候，會觸發blur事件) */
+
+var ham=document.getElementById("burgerInput");
+ham.addEventListener("blur",checkContent,false);
+
+var coke=document.getElementById("cokeInput");
+coke.addEventListener("blur",checkContent,false);
+
+
+/* ----------------------------------- */
+/* mousemove - 當滑鼠滑入指定內容時觸發 */
+var el2 =document.querySelector(".box");
+el2.addEventListener("mousemove",function () {
+    alert("碰到綠色了");
+},false)
+/* 小遊戲 */
+var el3=document.querySelectorAll(".boxgame");
+var len2=el3.length;
+for(var i=0;i<len2;i++){
+    el3[i].addEventListener("mousemove",function(e){
+        alert("你輸了");
+    },false);
+};
+
+
+/* ----------------------------------- */
+/*  */
+
+
+
+
