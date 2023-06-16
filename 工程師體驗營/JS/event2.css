@@ -74,5 +74,11 @@ img{
     left:480px;
     animation: fontbulger 4s infinite;
 }
+/*網頁座標 - 了解 screen、page、client 箇中差異*/
+#coordinates {
+    font-size: 18px;
+    color: red;
+    height: 1000px;
+  }
 
 

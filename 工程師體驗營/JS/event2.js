@@ -76,6 +76,7 @@ function calculatePrice() {
     // 顯示總價
     document.getElementById("totalPrice").innerHTML = "總價：" + totalPrice + "元";
   }
+
 /* blur - 離開焦點時進行事件觸發 (若沒輸入數值會跳出警告) */
 function checkContent(e){
     var str= e.target.value; /* 查出文字欄位的值 */
@@ -113,7 +114,49 @@ for(var i=0;i<len2;i++){
 
 
 /* ----------------------------------- */
-/*  */
+/* 網頁座標 - 了解 screen、page、client 箇中差異 */
+// 獲取座標訊息顯示在網頁上
+function showCoordinates(event) {
+    var coordinatesDiv = document.getElementById('coordinates');
+    
+    // 獲取滑鼠位置訊息
+    /* screen是看整個螢幕解析度 */
+    var screenX = event.screenX;
+    var screenY = event.screenY;
+    /* page是以網頁框架寬高去計算(有設定寬高才會有差) */
+    var pageX = event.pageX;
+    var pageY = event.pageY;
+    /* client是以瀏覽器視窗寬高去計算 */
+    var clientX = event.clientX;
+    var clientY = event.clientY;
+    
+    // 將座標及時顯示在網頁上
+    coordinatesDiv.innerHTML = 
+    'Screen: (' + screenX + ', ' + screenY + ')<br>' +
+    'Page: (' + pageX + ', ' + pageY + ')<br>' +
+    'Client: (' + clientX + ', ' + clientY + ')';
+  }
+  
+// 監聽滑鼠移動事件
+document.addEventListener('mousemove', showCoordinates);
+
+
+/* ----------------------------------- */
+/* 事件監聽優化篇 - 從父元素來監聽子元素內容 */
+//點擊li，讓console顯示裡面的文字
+var list2=document.querySelector(".list2"); /* (".list2 li") 只能監聽到父元素 */
+list2.addEventListener("click",checkName,false)
+function checkName(e){
+    /*console.log(e.target.nodeName); test 確定會點到li */
+
+    /* 會發現點擊到ul範圍會出現全部，所以要透過return去回傳空值來中斷程式碼 */
+    if(e.target.nodeName !== "LI"){return} /* 透過nodeName回傳值得知是大寫的LI */
+    /* 透過篩選，點到LI以外的ul、h、a標籤就都不會有反應了 */
+
+    console.log(e.target.textContent); /* 只會出現查理，因為querySelector 只會撈第一筆資料，所以要監聽到整個父元素 */
+}
+
+
 
 
 
