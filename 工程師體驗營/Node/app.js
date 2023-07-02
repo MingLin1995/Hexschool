@@ -1,5 +1,5 @@
 /* 載入模組到相對應的路徑 */
-var content=require("./data");
+var content=require("./data"); /* 載入data.js */
 /* ./代表同一層 ../代表上一層 */
 /* ------------------------ */
 
